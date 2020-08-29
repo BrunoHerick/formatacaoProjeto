@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<!--
+npm init -y = cria o arquivo package.json
+npm i = cria o arquivo package-lock.json
+-->
+
+<head>
+	<meta charset='utf-8'>
+	<title>Formulário</title>
+	<script src="jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+	<div id="conteudo">
+
+		<div id="titulo">Registros de formatação</div>
+
+		<form id="formulario" method="POST" action="http://localhost:3003/criarArquivo">
+			<div class="campos">
+				<input type="text" name="data_formatacao" placeholder="Data">
+				<input type="text" name="chamado" placeholder="N° do chamado">
+				<input type="text" name="sessp" placeholder="SESSP">
+				<input type="text" name="usuario" placeholder="Usuário">
+				<input type="text" name="coordenadoria" placeholder="Coordenadoria">
+				<input type="text" name="setor" placeholder="Setor">
+				<input type="text" name="predio" placeholder="Prédio">
+				<input type="text" name="sala" placeholder="Sala">
+				<input type="text" name="ramal" placeholder="Ramal">
+				<input type="text" name="modelo" placeholder="Modelo">
+			</div>
+			<div class="campos">
+				<input type="text" name="cpu" placeholder="CPU">
+				<input type="text" name="m_ram" placeholder="M.Ram">
+				<input type="text" name="hd" placeholder="HD">
+				<input type="text" name="arquitetura" placeholder="Bits">
+				<input type="text" name="tecnico" placeholder="Técnico">
+				<input type="text" name="patrimonio" placeholder="Patrimônio">
+				<input type="text" name="serie" placeholder="Série">
+				<div class="butoes">
+					<input type="submit" value="Enviar" id="enviar">
+					<input type="reset" value="Limpar">
+					<input type="submit" value="Ver dados" formaction="http://localhost:3003/mostrarRegistros">
+				</div>
+			</div>
+
+			<div class="campos">
+				<div class="selecione">
+					<input type="checkbox" name="nomeUsuario">
+					<label for="nomeUsuario">Nome de Usuário de Instalação <b>(user) - NÃO COLOCAR SENHA</b></label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="ativacao">
+					<label for="ativacao">Ativação e configuração de senha do Usuário <b>Administrador</b></label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="desativaUser">
+					<label for="desativaUser">Desativar usuário <b>user</b></label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="ativarChave">
+					<label for="ativarChave">Ativar com <b>chave key da máquina</b></label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="instalarDrivers">
+					<label for="instalarDrivers">Instalar <b>drivers (caso necessário)</b></label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="desabilitarProtocolo">
+					<label for="desabilitarProtocolo"><b>Desabilitar</b> protocolo TCP/IP versão 6</label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="dominioInserir">
+					<label for="dominioInserir">Inserir no domínio <b>(sessp.gov.br)</b> e REINICIAR</label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="nomeComputador">
+					<label for="nomeComputador">Nome do Computador (<b>sesspxxxx</b> - de acordo com a etiqueta)</label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="verificarWatchGuard">
+					<label for="verificarWatchGuard">Verificar se serviço do <b>WatchGuard</b> está ativo</label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="adicaoUsuarioPadrao">
+					<label for="adicaoUsuarioPadrao">Adição do usuário <b>padrão</b> como ADM e logar</label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="opcaoEnergia">
+					<label for="opcaoEnergia">Opções de energia</label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="msconfig">
+					<label for="msconfig">Configurar msconfig</label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="ativaOffice2010">
+					<label for="ativaOffice2010">Ativação do Office 2010 (Desinstalar o Office 365)</label>
+				</div>
+				<div class="selecione">
+					<input type="checkbox" name="atualizaOffice">
+					<label for="atualizaOffice">Atualizações do <b>Windows / Office</b></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
